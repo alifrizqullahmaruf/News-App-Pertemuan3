@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/soeharto_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textJudul"
+                />
+
+            <TextView
+                android:id="@+id/textJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="&quot;Enak Zamanku Toh&quot; - Kenangan Tentang Presiden Soeharto"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/parent"
+
+                tools:ignore="UnknownId" />
+
+            <TextView
+                android:id="@+id/textContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Jakarta, 5 September 2023 - Kata-kata &quot;Enak Zamanku Toh&quot; masih terus menggema dalam ingatan masyarakat Indonesia saat mengingat masa kepemimpinan Presiden Soeharto yang berlangsung selama empat dekade. Ungkapan ini telah menjadi ciri khas yang mencerminkan perasaan sebagian orang terhadap era tersebut, yang dimulai pada tahun 1967 hingga berakhir dengan pengunduran diri Soeharto pada tahun 1998.  Selama kepemimpinannya, Soeharto dikenal sebagai seorang pemimpin tegas yang mampu menjaga stabilitas politik dengan kuat. Era &quot;Orde Baru&quot; yang dipimpinnya memberikan stabilitas yang lama dinanti-nanti setelah periode ketidakstabilan politik yang dialami Indonesia. Pada sisi ekonomi, Indonesia juga mengalami pertumbuhan yang signifikan, mengangkat banyak orang keluar dari kemiskinan dan membangun infrastruktur modern yang masih digunakan hingga saat ini.  Namun, masa pemerintahan Soeharto juga dipenuhi kontroversi. Ada tuduhan pelanggaran hak asasi manusia dan penyalahgunaan kekuasaan yang menggantung selama bertahun-tahun. Demonstrasi mahasiswa dan tekanan dari berbagai elemen masyarakat akhirnya memaksa Soeharto mengundurkan diri pada tahun 1998, mengakhiri kepemimpinan yang panjang dan kuat.  Kata-kata &quot;Enak Zamanku Toh&quot; tidak hanya mencerminkan rasa nostalgia terhadap stabilitas dan kemakmuran ekonomi pada masa itu, tetapi juga membangkitkan perdebatan tentang harga yang dibayar oleh masyarakat dalam hal kebebasan sipil dan hak asasi manusia. Era Soeharto tetap menjadi bagian yang tidak terpisahkan dari sejarah Indonesia yang kompleks dan mendalam."
+                app:layout_constraintTop_toBottomOf="@id/img_news"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn_next"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:text="Selanjutnya"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/textContent"
+                android:backgroundTint="#FF9800"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn_prev"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:text="Sebelumnya"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textContent"
+                android:backgroundTint="#FF9800"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
